@@ -1,0 +1,5 @@
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Services\bin\Debug\FA.JustBlog.Services.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Services\bin\Debug\FA.JustBlog.Services.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Services\obj\Debug\FA.JustBlog.Services.csproj.CoreCompileInputs.cache
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Services\obj\Debug\FA.JustBlog.Services.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Services\obj\Debug\FA.JustBlog.Services.pdb
