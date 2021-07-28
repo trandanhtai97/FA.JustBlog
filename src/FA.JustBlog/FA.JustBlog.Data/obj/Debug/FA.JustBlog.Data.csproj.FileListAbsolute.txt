@@ -3,3 +3,14 @@ C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBl
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csproj.CoreCompileInputs.cache
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.dll
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\FA.JustBlog.Data.dll.config
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\EntityFramework.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\FA.JustBlog.Models.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\FA.JustBlog.Models.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\EntityFramework.xml
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csprojAssemblyReference.cache
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csproj.CopyComplete
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.Migrations.CreateDatabase.resources
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csproj.GenerateResource.cache
