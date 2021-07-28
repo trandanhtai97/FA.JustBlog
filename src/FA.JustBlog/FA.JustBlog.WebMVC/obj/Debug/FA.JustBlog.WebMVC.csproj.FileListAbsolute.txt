@@ -77,3 +77,16 @@ C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBl
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\obj\Debug\FA.JustBlog.WebMVC.csproj.CopyComplete
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\obj\Debug\FA.JustBlog.WebMVC.dll
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\obj\Debug\FA.JustBlog.WebMVC.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Common.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Models.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Services.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\EntityFramework.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Data.dll
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Common.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Common.dll.config
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Models.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Services.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Services.dll.config
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\EntityFramework.xml
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Data.pdb
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.WebMVC\bin\FA.JustBlog.Data.dll.config

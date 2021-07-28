@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="BaseEntities\BaseEntity.cs" />
     <Compile Include="BaseEntities\IBaseEntity.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Common\Category.cs" />
     <Compile Include="Common\Post.cs" />
     <Compile Include="Common\Tag.cs" />
