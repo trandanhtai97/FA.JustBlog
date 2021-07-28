@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FA.JustBlog.Common
+namespace FA.JustBlog.Data.Infrastructure
 {
-    public class Class1
+    class UnitOfWork
     {
     }
 }
