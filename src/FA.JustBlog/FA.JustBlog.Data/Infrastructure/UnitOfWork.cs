@@ -31,10 +31,10 @@ namespace FA.JustBlog.Data.Infrastructure
         public IGenericRepository<Tag> TagRepository =>
             _tagRepository ?? new GenericRepository<Tag>(_dbContext);
 
-        private IPostRepository _bookRepository;
+        private IGenericRepository<Post> _postRepository;
 
-        public IPostRepository PostRepository =>
-            _bookRepository ?? new PostRepository(_dbContext);
+        public IGenericRepository<Post> PostRepository =>
+            _postRepository ?? new GenericRepository<Post>(_dbContext);
 
         #region Methods
         public int SaveChanges()

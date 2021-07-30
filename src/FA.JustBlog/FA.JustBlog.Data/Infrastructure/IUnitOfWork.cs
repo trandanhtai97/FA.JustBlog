@@ -12,14 +12,13 @@ namespace FA.JustBlog.Data.Infrastructure
     public interface IUnitOfWork : IDisposable
     {
         JustBlogDbContext DataContext { get; }
-
         #region Master Data
 
         IGenericRepository<Category> CategoryRepository { get; }
 
         IGenericRepository<Tag> TagRepository { get; }
 
-        IPostRepository PostRepository { get; }
+        IGenericRepository<Post> PostRepository { get; }
 
         #endregion
 
