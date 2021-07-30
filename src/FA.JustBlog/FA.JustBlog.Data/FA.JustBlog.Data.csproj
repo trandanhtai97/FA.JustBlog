@@ -54,9 +54,7 @@
     <Compile Include="DbInitializer.cs" />
     <Compile Include="Infrastructure\BaseRepositories\GenericRepository.cs" />
     <Compile Include="Infrastructure\BaseRepositories\IGenericRepository.cs" />
-    <Compile Include="Infrastructure\IPostRepository.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
-    <Compile Include="Infrastructure\PostRepository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="JustBlogDbContext.cs" />
     <Compile Include="Migrations\202107280335125_CreateDatabase.cs" />
