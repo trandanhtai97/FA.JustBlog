@@ -20,7 +20,7 @@ namespace FA.JustBlog.WebMVC.Controllers
             _postServices = postServices;
             _categoryServices = categoryServices;
         }
-        // GET: Post
+        // GET: Posts
         public async Task<ActionResult> Index(int? pageIndex = 1, int? pageSize = 3)
         {
             Expression<Func<Post, bool>> filter = null;
@@ -31,10 +31,10 @@ namespace FA.JustBlog.WebMVC.Controllers
             return View(posts);
         }
 
-        public async Task<ActionResult> LastestPosts()
+        public ActionResult LastestPosts()
         {
-            var lastestPosts = await _postServices.GetLatestPostAsync(5);
-            return PartialView(lastestPosts);
+            var lastestPosts = Task.Run(() => _postServices.GetLatestPostAsync(5)).Result;
+            return PartialView("_LastestPost", lastestPosts);
         }
     }
 }

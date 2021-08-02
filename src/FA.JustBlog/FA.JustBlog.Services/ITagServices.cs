@@ -10,5 +10,10 @@ namespace FA.JustBlog.Services
 {
     public interface ITagServices : IBaseService<Tag>
     {
+        Tag GetTagByUrlSlug(string urlSlug);
+
+        Task<Tag> GetTagByUrlSlugAsync(string urlSlug);
+
+        Task<IEnumerable<Tag>> GetPopularTags(int size = 10);
     }
 }
