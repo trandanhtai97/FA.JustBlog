@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using FA.JustBlog.Services;
 
 namespace FA.JustBlog.WebMVC.Controllers
 {
@@ -10,7 +12,7 @@ namespace FA.JustBlog.WebMVC.Controllers
     {
         private readonly ITagServices _tagServices;
 
-        public TagsController(ITagServices tagServices)
+        public TagController(ITagServices tagServices)
         {
             _tagServices = tagServices;
         }

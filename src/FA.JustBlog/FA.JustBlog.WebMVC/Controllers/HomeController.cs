@@ -11,6 +11,7 @@ namespace FA.JustBlog.WebMVC.Controllers
     public class HomeController : Controller
     {
         private readonly IPostServices _postServices;
+
         public HomeController(IPostServices postServices)
         {
             _postServices = postServices;
