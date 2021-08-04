@@ -52,5 +52,14 @@ namespace FA.JustBlog.Services
         {
             return await _unitOfWork.PostRepository.GetQuery().Where(p => p.Published == published).ToListAsync();
         }
+
+        public async Task<IEnumerable<Post>> GetPostsByTagAsync(Guid tagId)
+        {
+            return await _unitOfWork.PostRepository.GetQuery().Where(p => p.Tags.Any(t => t.Id == tagId)).ToListAsync();
+        }
+        public async Task<IEnumerable<Post>> GetPostsByCategoryAsync(Guid categoryId)
+        {
+            return await _unitOfWork.PostRepository.GetQuery().Where(p => p.CategoryId == categoryId).ToListAsync();
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model CategoryViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create Category";
 }
 
 <h2>Create Category</h2>
@@ -24,7 +24,7 @@
         <div class="form-group col-md-6">
             @Html.LabelFor(model => model.UrlSlug, htmlAttributes: new { @class = "control-label" })
             <div>
-                @Html.EditorFor(model => model.UrlSlug, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+                @Html.EditorFor(model => model.UrlSlug, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.UrlSlug, "", new { @class = "text-danger" })
             </div>
         </div>

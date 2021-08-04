@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace FA.JustBlog.WebMVC.Controllers
 {
     public class PostsController : Controller
@@ -35,6 +36,16 @@ namespace FA.JustBlog.WebMVC.Controllers
         {
             var lastestPosts = Task.Run(() => _postServices.GetLatestPostAsync(5)).Result;
             return PartialView("_LastestPost", lastestPosts);
+        }
+
+        public async Task<ActionResult> Details(Guid id)
+        {
+            var post = await _postServices.GetByIdAsync(id);
+            if (post == null)
+            {
+                return HttpNotFound();
+            }
+            return View(post);
         }
     }
 }

@@ -20,7 +20,8 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
         {
             _categoryServices = categoryServices;
         }
-        // GET: Admin/CategoryManagement\
+
+        // GET: Admin/CategoryManagement
         public async Task<ActionResult> Index(string sortOrder, string currentFilter, string searchString,
             int? pageIndex = 1, int pageSize = 2)
         {
@@ -32,10 +33,12 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
             ViewData["InsertedAtSortParm"] = sortOrder == "InsertedAt" ? "insertedAt_desc" : "InsertedAt";
             ViewData["UpdatedAtSortParm"] = sortOrder == "UpdatedAt" ? "updatedAt_desc" : "UpdatedAt";
 
-            if (searchString != null) {
+            if (searchString != null)
+            {
                 pageIndex = 1;
             }
-            else {
+            else
+            {
                 searchString = currentFilter;
             }
 
@@ -44,14 +47,16 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
             // x => x.Name.Contains(searchString)
             Expression<Func<Category, bool>> filter = null;
 
-            if (!string.IsNullOrEmpty(searchString)) {
+            if (!string.IsNullOrEmpty(searchString))
+            {
                 filter = c => c.Name.Contains(searchString);
             }
 
             // q => q.OrderByDescending(c => c.Name)
             Func<IQueryable<Category>, IOrderedQueryable<Category>> orderBy = null;
 
-            switch (sortOrder) {
+            switch (sortOrder)
+            {
                 case "name_desc":
                     orderBy = q => q.OrderByDescending(c => c.Name);
                     break;
@@ -89,6 +94,7 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
             return View(categories);
         }
 
+        [HttpGet]
         // GET: Admin/CategoryManagement/Create
         public ActionResult Create()
         {
@@ -104,15 +110,25 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
         [ValidateInput(false)]
         public ActionResult Create(CategoryViewModel categoryViewModel)
         {
-            if (ModelState.IsValid) {
-                var category = new Category {
+            if (ModelState.IsValid)
+            {
+                var category = new Category
+                {
                     Id = Guid.NewGuid(),
                     Name = categoryViewModel.Name,
                     UrlSlug = categoryViewModel.UrlSlug,
                     Description = categoryViewModel.Description,
                 };
-                _categoryServices.Add(category);
-                return RedirectToAction("Index");
+                var result = _categoryServices.Add(category);
+                if (result > 0)
+                {
+                    TempData["Message"] = "Create category successful!";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.Message = "Create category failed! Please try again!";
+                }
             }
 
             return View(categoryViewModel);
@@ -121,15 +137,18 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
         // GET: Admin/CategoryManagement/Edit/5
         public ActionResult Edit(Guid? id)
         {
-            if (id == null) {
+            if (id == null)
+            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var category = _categoryServices.GetById((Guid)id);
-            if (category == null) {
+            if (category == null)
+            {
                 return HttpNotFound();
             }
 
-            var categoryViewModel = new CategoryViewModel() {
+            var categoryViewModel = new CategoryViewModel()
+            {
                 Id = category.Id,
                 Name = category.Name,
                 UrlSlug = category.UrlSlug,
@@ -146,36 +165,53 @@ namespace FA.JustBlog.WebMVC.Areas.Admin.Controllers
         [ValidateInput(false)]
         public async Task<ActionResult> Edit(CategoryViewModel categoryViewModel)
         {
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 var category = await _categoryServices.GetByIdAsync(categoryViewModel.Id);
-                if (category == null) {
+                if (category == null)
+                {
                     return HttpNotFound();
                 }
                 category.Name = categoryViewModel.Name;
                 category.UrlSlug = categoryViewModel.UrlSlug;
                 category.Description = categoryViewModel.Description;
 
-                _categoryServices.Update(category);
+                var result = _categoryServices.Update(category);
+                if (result)
+                {
+                    TempData["Message"] = "Update successfully";
+                }
+                else
+                {
+                    TempData["Message"] = "Update failed";
+                }
                 return RedirectToAction("Index");
             }
             return View(categoryViewModel);
         }
+
 
         // POST: Admin/CategoryManagement/Delete/5
         [HttpPost, ActionName("Delete")]
         public ActionResult Delete(Guid id)
         {
             Category category = _categoryServices.GetById(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
             var result = _categoryServices.Delete(category.Id);
-            if (result) {
+            if (result)
+            {
                 TempData["Message"] = "Delete Successful";
             }
-            else {
+            else
+            {
                 TempData["Message"] = "Delete Failed";
             }
             return RedirectToAction("Index");
         }
 
-      
+
     }
 }

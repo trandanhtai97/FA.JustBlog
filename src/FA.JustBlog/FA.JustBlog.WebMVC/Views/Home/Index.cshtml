@@ -1,9 +1,9 @@
-﻿@model IEnumerable<Post>
+﻿@Model IEnumerable<Post>
 @{
     ViewBag.Title = "Home Page";
 }
 
 @foreach (var item in Model)
 {
-    @Html.Partial("_PostOverview", item)
+    @Html.Partical("_PostOverview", item)
 }
