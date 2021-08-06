@@ -14,3 +14,4 @@ C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBl
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csproj.CopyComplete
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.Migrations.CreateDatabase.resources
 C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.csproj.GenerateResource.cache
+C:\Users\nguyen tien dat\Documents\DanhTai\FA.JustBlog\src\FA.JustBlog\FA.JustBlog.Data\obj\Debug\FA.JustBlog.Data.Migrations.Addmodifier.resources

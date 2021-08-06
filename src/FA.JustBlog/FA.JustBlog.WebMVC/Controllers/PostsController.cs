@@ -21,20 +21,31 @@ namespace FA.JustBlog.WebMVC.Controllers
             _postServices = postServices;
             _categoryServices = categoryServices;
         }
-        // GET: Posts
-        public async Task<ActionResult> Index(int? pageIndex = 1, int? pageSize = 3)
+        public async Task<ActionResult> Index(int? pageIndex = 1, int? pageSize = 5)
         {
-            Expression<Func<Post, bool>> filter = null;
-
-            Func<IQueryable<Post>, IOrderedQueryable<Post>> orderBy = o => o.OrderBy(p => p.Title);
-            var posts = await _postServices.GetAsync(filter: filter, orderBy: orderBy,
-                pageIndex: pageIndex ?? 1, pageSize: pageSize ?? 3);
+            Func<IQueryable<Post>, IOrderedQueryable<Post>> orderBy = x => x.OrderByDescending(p => p.PublishedDate);
+            var posts = await _postServices.GetAsync(filter: null, orderBy: orderBy,
+                pageIndex: pageIndex ?? 1, pageSize: pageSize ?? 5);
             return View(posts);
         }
-
         public ActionResult LastestPosts()
         {
             var lastestPosts = Task.Run(() => _postServices.GetLatestPostAsync(5)).Result;
+            ViewBag.PartialViewTitle = "Lasted Posts";
+            return PartialView("_LastestPost", lastestPosts);
+        }
+
+        public ActionResult MostViewPosts()
+        {
+            var lastestPosts = Task.Run(() => _postServices.GetMostViewPostAsync(5)).Result;
+            ViewBag.PartialViewTitle = "Most Posts";
+            return PartialView("_LastestPost", lastestPosts);
+        }
+
+        public ActionResult HighesPosts()
+        {
+            var lastestPosts = Task.Run(() => _postServices.GetHighesPostAsync(5)).Result;
+            ViewBag.PartialViewTitle = "Highes Posts";
             return PartialView("_LastestPost", lastestPosts);
         }
 

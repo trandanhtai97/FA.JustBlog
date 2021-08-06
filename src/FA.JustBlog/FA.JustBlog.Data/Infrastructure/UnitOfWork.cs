@@ -36,6 +36,13 @@ namespace FA.JustBlog.Data.Infrastructure
         public IGenericRepository<Post> PostRepository =>
             _postRepository ?? new GenericRepository<Post>(_dbContext);
 
+        private IGenericRepository<Comment> _commnetRepository;
+
+
+        public IGenericRepository<Comment> CommentRepository => _commnetRepository ?? new GenericRepository<Comment>(_dbContext);
+
+
+
         #region Methods
         public int SaveChanges()
         {

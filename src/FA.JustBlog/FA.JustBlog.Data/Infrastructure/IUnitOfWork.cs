@@ -21,6 +21,8 @@ namespace FA.JustBlog.Data.Infrastructure
 
         IGenericRepository<Post> PostRepository { get; }
 
+        IGenericRepository<Comment> CommentRepository { get; }
+
         #endregion
 
         int SaveChanges();
